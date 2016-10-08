@@ -1,8 +1,22 @@
 <resources>
-    <string name="app_name">android-benchmark</string>
+    <string name="app_name">Benchmark</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <string-array name="job_array">
+        <item>Avukat</item>
+        <item>Diş Hekimi</item>
+        <item>Doktor</item>
+        <item>Mühendis</item>
+        <item>Serbest</item>
+    </string-array>
+
+    <string-array name="gender_array">
+        <item>Erkek</item>
+        <item>Kadın</item>
+    </string-array>
+
 </resources>

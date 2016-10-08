@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    tools:context="layout.ControlsFragment">
+
+    <EditText
+        android:id="@+id/txt_fullname"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="Fullname"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/txt_birthday"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="Birthday"
+        android:focusable="false"/>
+
+    <Spinner
+        android:id="@+id/spn_job"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:entries="@array/job_array"
+        android:spinnerMode="dialog" />
+
+    <Spinner
+        android:id="@+id/spn_gender"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:entries="@array/gender_array" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView android:id="@+id/lbl_debt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Borç" />
+
+        <SeekBar android:id="@+id/sk_debt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:minWidth="150dp"/>
+
+        <TextView android:id="@+id/lbl_debt_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:minWidth="100dp"
+            android:text="-" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView android:id="@+id/lbl_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Age" />
+
+        <Button android:id="@+id/btn_age_decrease"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="-"/>
+
+        <Button
+            android:id="@+id/btn_age_increase"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="+"/>
+
+        <TextView android:id="@+id/lbl_age_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="-" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView android:id="@+id/lbl_marital_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Status" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+</LinearLayout>
