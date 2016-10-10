@@ -1,12 +1,18 @@
 package layout;
 
+import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.Display;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 
 import com.ibtech.smg.android_benchmark.R;
@@ -57,7 +63,20 @@ public class PopupFragment extends Fragment {
         actionsheet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                Activity activity = getActivity();
+                Display display = activity.getWindowManager().getDefaultDisplay();
+                Point size = new Point();
+                display.getSize(size);
+                int width = size.x;
+                int height = size.y;
+
+                final Dialog dialog = new Dialog(activity);
+                Window window = dialog.getWindow();
+                window.setGravity(Gravity.BOTTOM);
+                dialog.setContentView(R.layout.dialog_actionsheet);
+                dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+                dialog.getWindow().setLayout(width, height/2-200);
+                dialog.show();
             }
         });
 
