@@ -4,20 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="layout.CarouselThreeFragment">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+    
+    <View
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="20dp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:text="Black asdfasdfasdf asdfasdfasdfasdfasdfa asdfasfasdfasdfasdfasdfasdfasdf asdfasdfasdfasdfasdfasdf
-        asdfasdddddddşwerwqeladslfjalsdfjlasdfkasdlfjlasdfjlasdjflasdjflasdjfasdlfjalsdjflasdjflsadjflasdjflsadjflasjdflj
-        jljlajlljlkafasdfasdfasdfasdfasdfasdfasdfasdfasdf asdfasdfasdfasdfasdfa asdfasfasdfasdfasdfasdfasdfasdf asdfasdfasdfasdfasdfasdf
-        asdfasdddddddşwerwqeladslfjalsdfjlasdfkasdlfjlasdfjlasdjflasdjflasdjfasdlfjalsdjflasdjflsadjflasdjflsadjflasjdflj
-        jljlajlljlkafasdfasdfasdfasdfasdfasdfasdfasdfasdf asdfasdfasdfasdfasdfa asdfasfasdfasdfasdfasdfasdfasdf asdfasdfasdfasdfasdfasdf
-        asdfasdddddddşwerwqeladslfjalsdfjlasdfkasdlfjlasdfjlasdjflasdjflasdjfasdlfjalsdjflasdjflsadjflasdjflsadjflasjdflj
-        jljlajlljlkafasdfasdfasdfasdfasdfasdfasdfasdfasdf asdfasdfasdfasdfasdfa asdfasfasdfasdfasdfasdfasdfasdf asdfasdfasdfasdfasdfasdf" />
+        android:background="@color/yellow" />
 
 </LinearLayout>

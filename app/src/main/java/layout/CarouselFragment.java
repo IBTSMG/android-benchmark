@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ibtech.smg.android_benchmark.R;
+import com.ibtech.smg.android_benchmark.MyPagerAdapter;
 
 public class CarouselFragment extends Fragment {
 
@@ -22,31 +23,8 @@ public class CarouselFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_carousel, container, false);
 
         viewPager = (ViewPager) view.findViewById(R.id.viewpager);
-        viewPager.setAdapter(new SamplePagerAdapter(getActivity().getSupportFragmentManager()));
+        viewPager.setAdapter(new MyPagerAdapter(getChildFragmentManager()));
 
         return view;
-    }
-
-    public class SamplePagerAdapter extends FragmentPagerAdapter {
-
-        public SamplePagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            if (position == 0) {
-                return new CarouselOneFragment();
-            } else if(position == 1){
-                return new CarouselTwoFragment();
-            } else {
-                return new CarouselThreeFragment();
-            }
-        }
-
-        @Override
-        public int getCount() {
-            return 3;
-        }
     }
 }
