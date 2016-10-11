@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.graphics.Point;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.Display;
@@ -72,10 +73,11 @@ public class PopupFragment extends Fragment {
 
                 final Dialog dialog = new Dialog(activity);
                 Window window = dialog.getWindow();
+                window.setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
                 window.setGravity(Gravity.BOTTOM);
                 dialog.setContentView(R.layout.dialog_actionsheet);
                 dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
-                dialog.getWindow().setLayout(width, height/2-200);
+                dialog.getWindow().setLayout(width, height/2);
                 dialog.show();
             }
         });
